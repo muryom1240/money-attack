@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIショート動画 - テストモックアップ</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --text-light: #ffffff;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        /* 📱 スマホ画面（ショート動画）のシミュレーション */
+        .phone-mockup {
+            width: 360px;
+            height: 640px;
+            background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop') center/cover;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8), 0 0 0 10px #333;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* 暗くするオーバーレイ */
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.8) 100%);
+            z-index: 1;
+        }
+
+        /* 🎵 再生UIのダミー */
+        .ui-elements {
+            position: absolute;
+            right: 15px;
+            bottom: 100px;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .ui-icon {
+            width: 40px; height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            backdrop-filter: blur(5px);
+        }
+
+        /* 📝 中央のダイナミックテロップ */
+        .telop {
+            z-index: 2;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 
+                -2px -2px 0 #ff0055,  
+                 2px -2px 0 #ff0055,
+                -2px  2px 0 #ff0055,
+                 2px  2px 0 #ff0055,
+                 0 5px 15px rgba(0,0,0,0.8);
+            text-align: center;
+            line-height: 1.3;
+            width: 90%;
+            animation: popIn 0.5s ease-out;
+        }
+        
+        .telop-highlight {
+            color: #ffff00;
+            text-shadow: 
+                -2px -2px 0 #000,  
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* 📜 台本パネル */
+        .script-panel {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 400px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+        .script-panel h2 {
+            color: #00e676;
+            margin-top: 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .script-line {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .time { color: #888; font-family: monospace; }
+        .speaker { color: #38bdf8; font-weight: bold; }
+        .visual { color: #ffab00; font-size: 0.9em; background: rgba(255, 171, 0, 0.1); padding: 2px 5px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <!-- 動画プレビュー画面 -->
+    <div class="phone-mockup">
+        <div class="overlay"></div>
+        <div class="telop">
+            実はこれ<br>
+            <span class="telop-highlight">全部AIの仕業</span><br>
+            なんです
+        </div>
+        <div class="ui-elements">
+            <div class="ui-icon">🤍</div>
+            <div class="ui-icon">💬</div>
+            <div class="ui-icon">↗️</div>
+        </div>
+    </div>
+
+    <!-- 台本データ -->
+    <div class="script-panel">
+        <h2>📑 AI生成 台本データ (テスト)</h2>
+        <p style="color:#aaa; font-size: 0.9em;">※「都市伝説・オカルト好き」のペルソナを指定して生成</p>
+        
+        <div class="script-line">
+            <span class="time">00:00</span> <span class="speaker">音声:</span> 「おい、知ってるか？最近バズってるあの動画...」<br>
+            <span class="visual">🎬 背景映像: ノイズが走る暗い路地裏 (Pexels)</span>
+        </div>
+        <div class="script-line">
+            <span class="time">00:03</span> <span class="speaker">音声:</span> 「実はこれ、全部AIの仕業なんです。」<br>
+            <span class="visual">🎬 背景映像: サーバーが並ぶサイバー空間</span>
+        </div>
+        <div class="script-line">
+            <span class="time">00:06</span> <span class="speaker">音声:</span> 「誰も作っていないのに、勝手に毎日投稿され続けるチャンネル...」<br>
+            <span class="visual">🎬 背景映像: 不気味に光るスマホ画面</span>
+        </div>
+        <div class="script-line">
+            <span class="time">00:10</span> <span class="speaker">音声:</span> 「信じるか信じないかは、あなた次第。」<br>
+            <span class="visual">🎬 背景映像: ザラついたノイズエフェクト</span>
+        </div>
+        
+        <div style="margin-top: 30px; border-top: 1px dashed #555; padding-top: 15px;">
+            <p><strong>💡 収益化対策ポイント:</strong></p>
+            <ul style="color:#aaa; font-size: 0.9em; padding-left: 20px;">
+                <li>ペルソナによる語り口調の変化（独自性）</li>
+                <li>テロップのポップアニメーション（視覚的変化）</li>
+                <li>シーンごとにAPIから異なる背景動画を取得（ランダム性）</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
