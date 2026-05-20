@@ -1,6 +1,9 @@
 name: Auto Blog Post & Deploy
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     # 毎日日本時間 朝7時（UTC 22:00）に実行
     - cron: '0 22 * * *'
