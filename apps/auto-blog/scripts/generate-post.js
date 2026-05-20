@@ -58,8 +58,16 @@ heroImage: "/blog-placeholder-about.jpg"
     });
 
     let markdownContent = response.text;
-    // Markdownコードブロックのバッククォートが含まれている場合は除去
-    markdownContent = markdownContent.replace(/^```markdown\n/, '').replace(/\n```$/, '');
+    
+    // AIが「承知しました」などの余計なテキストを出力した場合に対処するため、
+    // 最初の `---` （フロントマターの開始）から末尾までを抽出する
+    const match = markdownContent.match(/---\n[\s\S]*/);
+    if (match) {
+      markdownContent = match[0];
+    }
+    
+    // 末尾に ``` が残っている場合は除去
+    markdownContent = markdownContent.replace(/\n```$/, '').trim();
 
     // ファイル名の生成 (slug)
     const dateStr = new Date().toISOString().split('T')[0];
