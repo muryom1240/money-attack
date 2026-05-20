@@ -40,15 +40,17 @@ jobs:
       - name: Generate AI Blog Post
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: npm run generate:post
 
       - name: Commit newly generated post
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add src/content/blog/
+          git add src/content/blog/ src/assets/
           # 変更がある場合のみコミット
           git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated AI blog post" && git push)
+
 
       - name: Build Astro site
         run: npm run build
