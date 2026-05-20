@@ -51,12 +51,27 @@ heroImage: "/blog-placeholder-about.jpg"
 (本文は、あなたのペルソナを活かしたフランクで少し毒舌、でも役立つ口調で記述してください。ただし絶対に安全基準は守ること。)
 `;
 
-  try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.0-flash',
-      contents: prompt,
-    });
+  let response;
+  let retries = 3;
+  while (retries > 0) {
+    try {
+      response = await ai.models.generateContent({
+        model: 'gemini-2.0-flash',
+        contents: prompt,
+      });
+      break; // 成功したらループを抜ける
+    } catch (error) {
+      if (error.status === 503 && retries > 1) {
+        console.log(`APIが一時的に混雑しています（503）。10秒待機して再試行します... (残り${retries - 1}回)`);
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        retries--;
+      } else {
+        throw error;
+      }
+    }
+  }
 
+  try {
     let markdownContent = response.text;
     
     // AIが「承知しました」などの余計なテキストを出力した場合に対処するため、
