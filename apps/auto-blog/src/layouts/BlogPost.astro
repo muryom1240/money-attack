@@ -11,7 +11,7 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="ja">
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
@@ -77,7 +77,25 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<h1>{title}</h1>
 						<hr />
 					</div>
+					<!-- 広告：記事本文直前 -->
+					<ins class="adsbygoogle"
+						style="display:block"
+						data-ad-client="ca-pub-1715658175194289"
+						data-ad-slot="auto"
+						data-ad-format="auto"
+						data-full-width-responsive="true"></ins>
+					<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
 					<slot />
+
+					<!-- 広告：記事本文直後 -->
+					<ins class="adsbygoogle"
+						style="display:block"
+						data-ad-client="ca-pub-1715658175194289"
+						data-ad-slot="auto"
+						data-ad-format="auto"
+						data-full-width-responsive="true"></ins>
+					<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 				</div>
 			</article>
 		</main>
