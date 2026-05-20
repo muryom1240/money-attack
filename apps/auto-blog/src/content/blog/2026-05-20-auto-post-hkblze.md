@@ -2,7 +2,7 @@
 title: "2026年、まだ手作業？ 無駄撲滅！ AIアシスタントで爆速仕事術、始めないヤツは損！"
 description: "2026年の最新トレンドから、仕事の無駄を根絶する「AIアシスタント」を徹底解説。今日から始める自動化で、時間泥棒にサヨナラしよう！"
 pubDate: "2026-05-20T17:20:59.581Z"
-heroImage: "/blog-placeholder-about.jpg"
+heroImage: "../../assets/blog-placeholder-about.jpg"
 ---
 
 # 君のその時間、もはや罪。2026年、AIアシスタントで無駄を撲滅せよ！

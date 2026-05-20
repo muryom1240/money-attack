@@ -44,7 +44,7 @@ ${safetyGuidelines}
 title: "記事のキャッチーなタイトル"
 description: "記事の要約（100文字程度）"
 pubDate: "${new Date().toISOString()}"
-heroImage: "/blog-placeholder-about.jpg"
+heroImage: "../../assets/blog-placeholder-about.jpg"
 ---
 
 # (ここから本文)

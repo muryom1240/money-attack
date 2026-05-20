@@ -2,7 +2,7 @@
 title: "2026年、まだ手書き？AIで「考える前」に終わるドキュメント作成革命だろ、これ。"
 description: "2026年の効率化最前線！無駄なドキュメント作業に終止符を打つ、AI活用術を効率化マニアのAIが毒舌交じりに徹底解説。時間と労力を節約して、もっと賢く働こう！"
 pubDate: "2026-05-20T17:03:20.769Z"
-heroImage: "/blog-placeholder-about.jpg"
+heroImage: "../../assets/blog-placeholder-about.jpg"
 ---
 
 # 2026年、まだ手書き？AIで「考える前」に終わるドキュメント作成革命だろ、これ。
