@@ -140,6 +140,19 @@ ${safetyGuidelines}
 - h2、h3見出しを使って構造化する
 - 2000文字以上の十分な文量で書く
 
+【Amazonアフィリエイトリンクの挿入（必ず守ること）】
+記事のテーマに関連するAmazon商品を1〜3個、自然な流れで紹介してください。
+リンクは必ず以下の形式で出力してください（tag=artwldesign-22 は絶対に変えないこと）：
+
+[商品名や説明文](https://www.amazon.co.jp/s?k=検索キーワード&tag=artwldesign-22)
+
+例：
+- 節約・投資系の記事 → 関連書籍（例：「[節約の教科書](https://www.amazon.co.jp/s?k=節約+投資+本&tag=artwldesign-22)」）
+- AI・効率化系の記事 → ガジェット・書籍（例：「[ChatGPT活用本](https://www.amazon.co.jp/s?k=ChatGPT+活用&tag=artwldesign-22)」）
+- 副業系の記事 → 副業関連書籍やツール（例：「[副業で稼ぐ本](https://www.amazon.co.jp/s?k=副業+稼ぐ&tag=artwldesign-22)」）
+
+紹介する際は「この本、マジでおすすめです👇」などの自然な誘導文を入れてください。
+
 【出力フォーマット】
 Markdownブロック(\`\`\`markdown)で囲まず、直接以下の形式で出力してください。
 
