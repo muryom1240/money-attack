@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+---
+
+<Layout
+	title="お問い合わせ"
+	description="Money Attack Blogへのお問い合わせ窓口"
+	pubDate={new Date('May 24 2026')}
+	heroImage={AboutHeroImage}
+>
+	<p>
+		当ブログ「Money Attack」に関するお問い合わせ、記事の内容に関するご質問、広告掲載のご相談などは、以下のメールアドレスまでお願いいたします。
+	</p>
+	
+	<div style="background-color: #f4f4f4; padding: 20px; border-radius: 8px; margin: 2em 0; text-align: center;">
+		<p style="margin: 0; font-weight: bold; font-size: 1.2em;">
+			✉️ メールアドレス:<br/>
+			<a href="mailto:info@example.com">info@example.com</a>
+		</p>
+	</div>
+
+	<p>
+		※現在はお問い合わせフォームを準備中のため、直接メールにてご連絡をお願いいたします。<br />
+		※お問い合わせいただいた内容によっては、回答までにお時間をいただく場合や、回答いたしかねる場合がございます。あらかじめご了承ください。
+	</p>
+</Layout>
