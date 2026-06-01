@@ -75,6 +75,22 @@ Humanoid設定が完了すれば、Unity Asset StoreやMixamoの汎用アニメ�
 > [🛝 BOOTHショップはこちら](https://artwldesign.booth.pm/)
 ---
 
+## 📚 もっと学びたい方のための厳選書籍
+
+Unityやゲーム開発をさらに深く掴り下げたい方に、実際に使って役立ったおすすめ書籍を紹介します。
+
+- **Unity入門の第一歩はこれ！**
+  コンポーネントの仕組みからC#スクリプトまで、初心者がつまずかに学べる構成。丸一日下読んで実践できる内容満載。
+  [🎮 Unity実践アニメーション・3Dゲーム開発（Amazon）](https://www.amazon.co.jp/s?k=Unity+3Dゲーム+C#+入門&tag=artwldesign-22)
+
+- **Blender→Unityのワークフローを一冊で完全理解！**
+  3Dモデル制作からUnityへのエクスポート・インポート、アニメーション設定までを体系的に学べる庅作。インディーゲーム制作のバイブル的存在。
+  [🎨 Blender→Unity アセット制作ワークフロー（Amazon）](https://www.amazon.co.jp/s?k=Blender+Unity+アセット+ゲーム開発&tag=artwldesign-22)
+
+- **アニメーションの基礎を身につけたいならこれ！**
+  アイドル・歩行・戦闘などゲームで必要な基本アニメーションの原理から、Unityでの実装方法までを解説。キャラクターを生き生きと動かすための必読書。
+  [✨ ゲームアニメーション 引り出し集（Amazon）](https://www.amazon.co.jp/s?k=ゲーム+アニメーション+実装+Unity&tag=artwldesign-22)
+
 ## よくある質問（FAQ）
 
 ### Q. インポートしたモデルが巨大（または極小）になってしまいます
